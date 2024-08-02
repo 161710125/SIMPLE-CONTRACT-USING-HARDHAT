@@ -10,14 +10,16 @@ contract Swisstronik {
      * @dev Constructor is used to set the initial message for the contract
      * @param _message the message to associate with the message variable.
      */
-    constructor(string memory _message) payable{
-        message = _message;
-    }
 
     /**
      * @dev setMessage() updates the stored message in the contract
      * @param _message the new message to replace the existing one
      */
+
+    function initialize(string memory _message) public {
+        message = _message;
+    }
+
     function setMessage(string memory _message) public {
         message = _message;
     }
